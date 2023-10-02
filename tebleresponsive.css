@@ -1,0 +1,99 @@
+* {
+    padding: 0px;
+    box-sizing: border-box; /*El tamaño de los elementos tengan en cuenta margin y pading*/
+    overflow-x: hidden;
+}
+
+/*Table desktop*/
+
+.table-teckio {
+    width: 100%;
+    margin: 10 auto;
+    background: rgb(2, 48, 80);
+    color: azure;
+    overflow-x: hidden;
+    border-collapse: collapse;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+.table-teckio tr th {
+    background: rgb(56, 59, 45);
+    background: linear-gradient(0deg, rgb(28, 47, 68) 0%, rgba(0, 0, 0, 1) 100%);
+    border: solid 1px #909090;
+    padding: 10px;
+    text-align: left;
+}
+
+.table-teckio tr td {
+    border: solid 1px #909090;
+    padding: 10px;
+}
+
+.table-teckio tr:nth-last-of-type(odd) {
+    background: rgb(87, 112, 112);
+    background: linear-gradient(0deg, rgb(30, 47, 103) 0%, rgb(18, 12, 65) 100%);
+}
+
+/*Table mobile*/
+.table-mobile {
+    display: none;
+    width: 100%;
+    margin: 0 auto;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+
+
+@media(max-width: 700px) {
+    .table-mobile {
+        display: block;
+    }
+
+    .table-mobile .fila .columna {
+        display: flex;
+    }
+
+    .table-mobile .fila .columna .header, .table-mobile .fila .columna .contenido {
+        border: solid 1px #909090;
+        border-bottom: none;
+        padding: 10px;
+        background-color: blue;
+
+    }
+
+        .table-mobile .fila:nth-of-type(even) .columna .contenido {
+            background: rgb(87, 112, 112);
+            background: linear-gradient(0deg, rgb(30, 47, 103) 0%, rgb(18, 12, 65) 100%);
+        }
+
+        .table-mobile .fila:nth-of-type(even) .columna .header {
+            background: rgb(87, 112, 112);
+            background: linear-gradient(0deg, rgb(30, 47, 103) 0%, rgb(18, 12, 65) 100%);
+        }
+
+                .table-mobile .fila .columna .header {
+                    width: 40%;
+                    background: rgb(56, 59, 45);
+                    background: linear-gradient(0deg, rgb(28, 47, 68) 0%, rgba(0, 0, 0, 1) 100%);
+                    color: aliceblue;
+                    font-weight: bold;
+                }
+        
+
+        .table-mobile .fila .columna .contenido {
+            background: rgb(56, 59, 45);
+    background: linear-gradient(0deg, rgb(28, 47, 68) 0%, rgba(0, 0, 0, 1) 100%);
+            color: aliceblue;
+            width: 60%;
+        }
+
+        .table-teckio{
+            display: none;
+        }
+}
